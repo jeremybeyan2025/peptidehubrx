@@ -7,6 +7,7 @@
   <meta name="description" content="A cinematic, provider-guided peptide and longevity intake experience built around clinical review, eligibility, and premium patient education." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -29,9 +30,10 @@
 
   <main id="top">
     <section class="hero cinematic-section" data-parallax-root>
-      <div class="hero-bg layer layer-back" data-depth="0.08"></div>
+      <img class="hero-photo layer layer-back" data-depth="0.08" src="https://images.unsplash.com/photo-1532187643603-ba119ca4109e?auto=format&fit=crop&w=2200&q=82" alt="Premium clinical laboratory with cinematic lighting">
       <div class="hero-orb layer layer-mid" data-depth="0.18"></div>
-      <div class="hero-grid layer layer-front" data-depth="0.28"></div>
+      <img class="hero-product layer layer-front" data-depth="0.32" src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&w=900&q=82" alt="Modern medical research visual">
+      <div class="hero-grid layer layer-front" data-depth="0.24"></div>
       <div class="hero-overlay"></div>
       <div class="container hero-content reveal">
         <p class="eyebrow">Provider-guided peptide care</p>
@@ -51,11 +53,24 @@
           <p class="eyebrow">Guided visual intake</p>
           <h2>Built like a brand film. Structured like a clinical pathway.</h2>
           <p id="storyLead">Each step keeps the patient grounded: goals first, screening second, provider review before any recommendation.</p>
+          <div class="mini-image-row" aria-hidden="true">
+            <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=420&q=80" alt="">
+            <img src="https://images.unsplash.com/photo-1518152006812-edab29b069ac?auto=format&fit=crop&w=420&q=80" alt="">
+          </div>
         </aside>
         <div class="story-steps">
-          <article class="story-step reveal" data-story="01"><div class="story-visual visual-one"></div><div class="story-card"><span>01</span><h3>Start with goals</h3><p>Energy, recovery, metabolic support, sleep, and longevity are organized into clean intake paths.</p></div></article>
-          <article class="story-step reveal" data-story="02"><div class="story-visual visual-two"></div><div class="story-card"><span>02</span><h3>Screen for fit</h3><p>Health history, medications, timeline, and expectations are captured before clinical review.</p></div></article>
-          <article class="story-step reveal" data-story="03"><div class="story-visual visual-three"></div><div class="story-card"><span>03</span><h3>Provider-led next step</h3><p>Patients move forward only when a licensed provider determines the pathway is appropriate.</p></div></article>
+          <article class="story-step reveal" data-story="01">
+            <img class="story-photo" src="https://images.unsplash.com/photo-1518152006812-edab29b069ac?auto=format&fit=crop&w=1500&q=82" alt="Clinical goals and diagnostics visual">
+            <div class="story-card"><span>01</span><h3>Start with goals</h3><p>Energy, recovery, metabolic support, sleep, and longevity are organized into clean intake paths.</p></div>
+          </article>
+          <article class="story-step reveal" data-story="02">
+            <img class="story-photo" src="https://images.unsplash.com/photo-1581093458791-9d09a5fded7e?auto=format&fit=crop&w=1500&q=82" alt="Provider review and screening visual">
+            <div class="story-card"><span>02</span><h3>Screen for fit</h3><p>Health history, medications, timeline, and expectations are captured before clinical review.</p></div>
+          </article>
+          <article class="story-step reveal" data-story="03">
+            <img class="story-photo" src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=1500&q=82" alt="Modern healthcare pathway visual">
+            <div class="story-card"><span>03</span><h3>Provider-led next step</h3><p>Patients move forward only when a licensed provider determines the pathway is appropriate.</p></div>
+          </article>
         </div>
       </div>
     </section>
@@ -66,15 +81,15 @@
         <h2>Depth, clarity, and calm confidence at every touchpoint.</h2>
       </div>
       <div class="gallery-panel panel-left reveal tilt-card">
-        <div class="gallery-image image-energy"></div>
+        <img class="gallery-photo" src="https://images.unsplash.com/photo-1511174511562-5f7f18b874f8?auto=format&fit=crop&w=1900&q=82" alt="Premium energy and vitality medical visual">
         <div class="floating-copy"><span>Energy + Vitality</span><h3>For patients who want a more structured conversation about fatigue, recovery, and daily performance.</h3></div>
       </div>
       <div class="gallery-panel panel-right reveal tilt-card">
-        <div class="gallery-image image-metabolic"></div>
+        <img class="gallery-photo" src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?auto=format&fit=crop&w=1900&q=82" alt="Metabolic support and wellness nutrition visual">
         <div class="floating-copy"><span>Metabolic Support</span><h3>A clean, premium intake flow for weight-management history, labs, goals, and provider review.</h3></div>
       </div>
       <div class="gallery-panel panel-left reveal tilt-card">
-        <div class="gallery-image image-recovery"></div>
+        <img class="gallery-photo" src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1900&q=82" alt="Recovery and resilience clinical visual">
         <div class="floating-copy"><span>Recovery + Resilience</span><h3>Positioned for education-first wellness support without miracle claims or underground messaging.</h3></div>
       </div>
     </section>
@@ -86,10 +101,10 @@
           <h2>Premium cards. Simple choices. Strong conversion path.</h2>
         </div>
         <div class="service-grid">
-          <article class="service-card reveal tilt-card"><span class="service-icon">✦</span><h3>Clinical Intake</h3><p>Collect goals, history, and readiness with a refined screening flow.</p></article>
-          <article class="service-card reveal tilt-card"><span class="service-icon">◈</span><h3>Provider Review</h3><p>Keep every recommendation tied to licensed clinical judgment.</p></article>
-          <article class="service-card reveal tilt-card"><span class="service-icon">◎</span><h3>Pathway Matching</h3><p>Route patients into energy, metabolic, recovery, sleep, or longevity tracks.</p></article>
-          <article class="service-card reveal tilt-card"><span class="service-icon">◇</span><h3>Ongoing Support</h3><p>Build follow-up, education, and patient communication into the experience.</p></article>
+          <article class="service-card reveal tilt-card"><img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=700&q=80" alt="Clinical intake"><span class="service-icon">✦</span><h3>Clinical Intake</h3><p>Collect goals, history, and readiness with a refined screening flow.</p></article>
+          <article class="service-card reveal tilt-card"><img src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=700&q=80" alt="Provider review"><span class="service-icon">◈</span><h3>Provider Review</h3><p>Keep every recommendation tied to licensed clinical judgment.</p></article>
+          <article class="service-card reveal tilt-card"><img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=700&q=80" alt="Pathway matching"><span class="service-icon">◎</span><h3>Pathway Matching</h3><p>Route patients into energy, metabolic, recovery, sleep, or longevity tracks.</p></article>
+          <article class="service-card reveal tilt-card"><img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=700&q=80" alt="Ongoing support"><span class="service-icon">◇</span><h3>Ongoing Support</h3><p>Build follow-up, education, and patient communication into the experience.</p></article>
         </div>
       </div>
     </section>
@@ -101,6 +116,9 @@
           <h2>Designed to feel premium without making reckless medical promises.</h2>
           <p>PeptideHubRx uses compliant, education-first language: no guaranteed outcomes, no disease-treatment claims, no shortcut around provider review.</p>
         </div>
+        <div class="proof-image-wrap reveal tilt-card">
+          <img src="https://images.unsplash.com/photo-1530026186672-2cd00ffc50fe?auto=format&fit=crop&w=1300&q=82" alt="Clean modern clinical consultation environment">
+        </div>
         <div class="proof-track reveal" aria-label="proof cards">
           <div class="proof-card"><strong>Provider review</strong><span>Every pathway begins with eligibility and clinical judgment.</span></div>
           <div class="proof-card"><strong>Readable at speed</strong><span>Luxury visuals with sharp copy and clear calls to action.</span></div>
@@ -110,6 +128,7 @@
     </section>
 
     <section class="final-cta" id="contact">
+      <img class="cta-photo" src="https://images.unsplash.com/photo-1581093458791-9d09a5fded7e?auto=format&fit=crop&w=2100&q=82" alt="Cinematic healthcare technology visual">
       <div class="cta-bg"></div>
       <div class="container cta-grid reveal">
         <div>
