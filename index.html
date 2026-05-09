@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PeptideHubRx | Dr. P Peptide Education</title>
-  <meta name="description" content="PeptideHubRx is a mobile-first peptide education and intake experience featuring Dr. P, our resident peptide education guide." />
+  <meta name="description" content="PeptideHubRx is a mobile-first peptide education and intake experience featuring Dr. P, peptide watchlists, compound explainers, GLP-1 education, and provider-guided intake." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -15,12 +15,13 @@
 
   <header class="site-header">
     <nav class="nav container">
-      <a class="brand" href="#top"><span class="brand-icon">⚗</span><span>PEPTIDE <b>HUB</b></span></a>
+      <a class="brand" href="index.html"><span class="brand-icon">⚗</span><span>PEPTIDE <b>HUB</b></span></a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="navLinks">Menu</button>
       <div class="nav-links" id="navLinks">
         <a href="#watchlist">Watchlist</a>
+        <a href="stacks.html">Stacks</a>
+        <a href="#glp">GLP-1s</a>
         <a href="#drp">Dr. P</a>
-        <a href="#how">How it works</a>
         <a class="nav-cta" href="#contact">Start</a>
       </div>
     </nav>
@@ -35,7 +36,7 @@
           <p class="hero-subhead">Meet Dr. P — our resident peptide expert built to break down peptide conversations without miracle claims or confusing internet noise.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#watchlist">See the watchlist</a>
-            <a class="btn btn-secondary" href="#contact">Take the quiz</a>
+            <a class="btn btn-secondary" href="stacks.html">Popular stacks</a>
           </div>
         </div>
 
@@ -52,6 +53,13 @@
       </div>
     </section>
 
+    <section class="ticker-wrap" aria-label="Peptide and GLP-1 education ticker">
+      <div class="ticker-track">
+        <span>July Watchlist: TB-500</span><span>BPC-157</span><span>KPV</span><span>GHK-Cu</span><span>MK-677</span><span id="glp">Current GLP-1 education: semaglutide</span><span>tirzepatide</span><span>liraglutide</span><span>dulaglutide</span><span>Educational content only • not medical advice</span>
+        <span>July Watchlist: TB-500</span><span>BPC-157</span><span>KPV</span><span>GHK-Cu</span><span>MK-677</span><span>Current GLP-1 education: semaglutide</span><span>tirzepatide</span><span>liraglutide</span><span>dulaglutide</span><span>Educational content only • not medical advice</span>
+      </div>
+    </section>
+
     <section class="trust-strip">
       <div class="container trust-grid">
         <div><strong>Clinician Guided</strong><span>Care-first positioning</span></div>
@@ -64,43 +72,31 @@
       <div class="container">
         <div class="section-heading reveal">
           <p class="eyebrow">Peptide watchlist</p>
-          <h2>Comic-style education cards built for fast mobile reading.</h2>
-          <p>These are educational conversation starters, not medical advice or treatment claims.</p>
+          <h2>Tap a card for the deeper scientific breakdown.</h2>
+          <p>Each page is designed as a patient-friendly education file: mechanism talk, why people discuss it, regulatory cautions, and Dr. P’s clean take.</p>
         </div>
 
         <div class="watchlist-grid">
-          <article class="watch-card reveal">
+          <a class="watch-card reveal card-link" href="tb-500.html">
             <div class="watch-top"><span>July Watchlist</span><b>Under Review</b></div>
             <h3>TB-500</h3>
             <p class="tagline">The tissue + recovery conversation.</p>
-            <ul>
-              <li><strong>What it is:</strong> Often discussed in tissue-support and recovery conversations.</li>
-              <li><strong>Why it matters:</strong> FDA review topic: wound healing.</li>
-              <li><strong>Dr. P take:</strong> Focus on mechanism, evidence, safety, and regulation.</li>
-            </ul>
-          </article>
+            <ul><li><strong>Tap in:</strong> Mechanism, wound-healing discussion, safety flags, and Dr. P take.</li></ul>
+          </a>
 
-          <article class="watch-card reveal">
+          <a class="watch-card reveal card-link" href="bpc-157.html">
             <div class="watch-top"><span>July Watchlist</span><b>Under Review</b></div>
             <h3>BPC-157</h3>
             <p class="tagline">The gut + repair conversation.</p>
-            <ul>
-              <li><strong>What it is:</strong> Often discussed in gut-health, tissue-repair, and recovery conversations.</li>
-              <li><strong>Why it matters:</strong> FDA review topic: ulcerative colitis.</li>
-              <li><strong>Dr. P take:</strong> Popular topic where gut, inflammation, and recovery overlap.</li>
-            </ul>
-          </article>
+            <ul><li><strong>Tap in:</strong> Gut-health conversation, repair talk, regulatory caution, and Dr. P take.</li></ul>
+          </a>
 
-          <article class="watch-card reveal">
+          <a class="watch-card reveal card-link" href="kpv.html">
             <div class="watch-top"><span>July Watchlist</span><b>Under Review</b></div>
             <h3>KPV</h3>
             <p class="tagline">The inflammation conversation.</p>
-            <ul>
-              <li><strong>What it is:</strong> Short peptide often discussed around inflammatory-pathway education.</li>
-              <li><strong>Why it matters:</strong> Review topics include wound healing and inflammatory conditions.</li>
-              <li><strong>Dr. P take:</strong> Clean education first — no miracle claims.</li>
-            </ul>
-          </article>
+            <ul><li><strong>Tap in:</strong> Inflammatory pathway education, human-data caution, and Dr. P take.</li></ul>
+          </a>
         </div>
       </div>
     </section>
@@ -113,9 +109,24 @@
           <p>Use Dr. P to make each topic understandable at a glance — what it is, why people discuss it, and what questions to ask before doing anything.</p>
         </div>
         <div class="compare-grid">
-          <div><h3>GHK-Cu</h3><p>Often discussed in skin, hair, cosmetic repair, and tissue-support conversations.</p></div>
-          <div><h3>MK-677</h3><p>Often discussed around sleep, appetite, recovery, and body-composition interest.</p></div>
+          <a href="ghk-cu.html"><h3>GHK-Cu</h3><p>Skin, hair, cosmetic repair, and tissue-support education.</p></a>
+          <a href="mk-677.html"><h3>MK-677</h3><p>Growth-hormone secretagogue conversation, sleep, appetite, and recovery interest.</p></a>
         </div>
+      </div>
+    </section>
+
+    <section class="watchlist-section compact-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Popular stacks</p>
+          <h2>Stack concepts for education — not protocols.</h2>
+          <p>Built as category-based discussion guides, not dosing instructions or treatment recommendations.</p>
+        </div>
+        <a class="stack-feature-card reveal" href="stacks.html">
+          <span>Explore popular stacks</span>
+          <strong>Recovery • skin + hair • metabolic education • GLP-1 support conversations</strong>
+          <em>View stack library →</em>
+        </a>
       </div>
     </section>
 
@@ -154,7 +165,7 @@
 
   <footer class="footer">
     <div class="container footer-grid">
-      <a class="brand" href="#top"><span class="brand-icon">⚗</span><span>PEPTIDE <b>HUB</b></span></a>
+      <a class="brand" href="index.html"><span class="brand-icon">⚗</span><span>PEPTIDE <b>HUB</b></span></a>
       <p>Educational content only. Not medical advice. Peptide availability and use depend on applicable law, clinical judgment, and qualified provider review.</p>
     </div>
   </footer>
