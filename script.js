@@ -25,57 +25,47 @@ const revealObserver = new IntersectionObserver((entries) => {
       revealObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.14 });
+}, { threshold: 0.12 });
 
 document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
 
-if (!prefersReducedMotion) {
-  const layers = document.querySelectorAll('[data-depth]');
-  let pointerX = 0;
-  let pointerY = 0;
-  let scrollY = window.scrollY;
-  let ticking = false;
+// Reliable JavaScript marquee fallback for GitHub Pages/mobile browsers.
+function startTicker() {
+  const ticker = document.querySelector('.ticker-track');
+  if (!ticker || prefersReducedMotion) return;
 
-  const animateLayers = () => {
-    layers.forEach((layer) => {
-      const depth = Number(layer.dataset.depth || 0);
-      const x = pointerX * depth * 22;
-      const y = pointerY * depth * 18 + scrollY * depth * 0.12;
-      layer.style.transform = `translate3d(${x}px, ${y}px, 0) scale(1.07)`;
-    });
-    ticking = false;
-  };
+  const firstGroup = ticker.querySelector('.ticker-group');
+  if (!firstGroup) return;
 
-  const requestLayerTick = () => {
-    if (!ticking) {
-      requestAnimationFrame(animateLayers);
-      ticking = true;
-    }
-  };
+  let distance = firstGroup.scrollWidth;
+  let position = 0;
+  let lastTime = performance.now();
+  const speed = window.innerWidth < 600 ? 28 : 42;
 
-  window.addEventListener('pointermove', (event) => {
-    pointerX = (event.clientX / window.innerWidth - 0.5) * 2;
-    pointerY = (event.clientY / window.innerHeight - 0.5) * 2;
-    requestLayerTick();
-  }, { passive: true });
-
-  window.addEventListener('scroll', () => {
-    scrollY = window.scrollY;
-    requestLayerTick();
-  }, { passive: true });
-
-  document.querySelectorAll('.tilt-card').forEach((card) => {
-    card.addEventListener('pointermove', (event) => {
-      const rect = card.getBoundingClientRect();
-      const x = (event.clientX - rect.left) / rect.width - 0.5;
-      const y = (event.clientY - rect.top) / rect.height - 0.5;
-      card.style.transform = `perspective(1200px) rotateX(${y * -4}deg) rotateY(${x * 5}deg) translateY(-4px)`;
-    });
-    card.addEventListener('pointerleave', () => {
-      card.style.transform = '';
-    });
+  const resizeObserver = new ResizeObserver(() => {
+    distance = firstGroup.scrollWidth;
   });
+  resizeObserver.observe(firstGroup);
+
+  ticker.classList.add('js-ticker-active');
+
+  function animate(now) {
+    const delta = (now - lastTime) / 1000;
+    lastTime = now;
+    position -= speed * delta;
+
+    if (Math.abs(position) >= distance) {
+      position = 0;
+    }
+
+    ticker.style.transform = `translate3d(${position}px, 0, 0)`;
+    requestAnimationFrame(animate);
+  }
+
+  requestAnimationFrame(animate);
 }
+
+startTicker();
 
 const leadForm = document.querySelector('#leadForm');
 const formMessage = document.querySelector('#formMessage');
