@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PeptideHubRx | Cinematic Provider-Guided Peptide Care</title>
-  <meta name="description" content="A cinematic, provider-guided peptide and longevity intake experience built around clinical review, eligibility, and premium patient education." />
+  <title>PeptideHubRx | Dr. P Peptide Education</title>
+  <meta name="description" content="PeptideHubRx is a mobile-first peptide education and intake experience featuring Dr. P, our resident peptide education guide." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://images.unsplash.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -16,132 +15,161 @@
 
   <header class="site-header">
     <nav class="nav container">
-      <a class="brand" href="#top" aria-label="PeptideHubRx home"><span class="brand-mark">PH</span><span>PeptideHubRx</span></a>
+      <a class="brand" href="#top"><span class="brand-icon">⚗</span><span>PEPTIDE <b>HUB</b></span></a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="navLinks">Menu</button>
       <div class="nav-links" id="navLinks">
-        <a href="#story">Experience</a>
-        <a href="#gallery">Pathways</a>
-        <a href="#services">Services</a>
-        <a href="#proof">Proof</a>
-        <a class="nav-cta" href="#contact">Start intake</a>
+        <a href="#watchlist">Watchlist</a>
+        <a href="#drp">Dr. P</a>
+        <a href="#how">How it works</a>
+        <a class="nav-cta" href="#contact">Start</a>
       </div>
     </nav>
   </header>
 
   <main id="top">
-    <section class="hero cinematic-section" data-parallax-root>
-      <img class="hero-photo layer layer-back" data-depth="0.08" src="https://images.unsplash.com/photo-1532187643603-ba119ca4109e?auto=format&fit=crop&w=2200&q=82" alt="Premium clinical laboratory with cinematic lighting">
-      <div class="hero-orb layer layer-mid" data-depth="0.18"></div>
-      <img class="hero-product layer layer-front" data-depth="0.32" src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&w=900&q=82" alt="Modern medical research visual">
-      <div class="hero-grid layer layer-front" data-depth="0.24"></div>
-      <div class="hero-overlay"></div>
-      <div class="container hero-content reveal">
-        <p class="eyebrow">Provider-guided peptide care</p>
-        <h1>A smarter way to enter the peptide conversation.</h1>
-        <p class="hero-subhead">A premium intake experience for patients who want structure, education, eligibility screening, and licensed provider review before taking action.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary magnetic" href="#contact">Take the eligibility quiz</a>
-          <a class="btn btn-secondary magnetic" href="#story">Watch the experience unfold</a>
-        </div>
-      </div>
-      <div class="scroll-cue" aria-hidden="true"><span></span>Scroll</div>
-    </section>
-
-    <section class="story-section" id="story">
-      <div class="container story-wrap">
-        <aside class="story-copy">
-          <p class="eyebrow">Guided visual intake</p>
-          <h2>Built like a brand film. Structured like a clinical pathway.</h2>
-          <p id="storyLead">Each step keeps the patient grounded: goals first, screening second, provider review before any recommendation.</p>
-          <div class="mini-image-row" aria-hidden="true">
-            <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=420&q=80" alt="">
-            <img src="https://images.unsplash.com/photo-1518152006812-edab29b069ac?auto=format&fit=crop&w=420&q=80" alt="">
+    <section class="mobile-hero">
+      <div class="container hero-wrap">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Clinician guided • evidence first • no hype</p>
+          <h1>Peptide education that feels clear, visual, and useful.</h1>
+          <p class="hero-subhead">Meet Dr. P — our resident peptide expert built to break down peptide conversations without miracle claims or confusing internet noise.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#watchlist">See the watchlist</a>
+            <a class="btn btn-secondary" href="#contact">Take the quiz</a>
           </div>
-        </aside>
-        <div class="story-steps">
-          <article class="story-step reveal" data-story="01">
-            <img class="story-photo" src="https://images.unsplash.com/photo-1518152006812-edab29b069ac?auto=format&fit=crop&w=1500&q=82" alt="Clinical goals and diagnostics visual">
-            <div class="story-card"><span>01</span><h3>Start with goals</h3><p>Energy, recovery, metabolic support, sleep, and longevity are organized into clean intake paths.</p></div>
-          </article>
-          <article class="story-step reveal" data-story="02">
-            <img class="story-photo" src="https://images.unsplash.com/photo-1581093458791-9d09a5fded7e?auto=format&fit=crop&w=1500&q=82" alt="Provider review and screening visual">
-            <div class="story-card"><span>02</span><h3>Screen for fit</h3><p>Health history, medications, timeline, and expectations are captured before clinical review.</p></div>
-          </article>
-          <article class="story-step reveal" data-story="03">
-            <img class="story-photo" src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=1500&q=82" alt="Modern healthcare pathway visual">
-            <div class="story-card"><span>03</span><h3>Provider-led next step</h3><p>Patients move forward only when a licensed provider determines the pathway is appropriate.</p></div>
-          </article>
+        </div>
+
+        <div class="drp-hero-card reveal" id="drp">
+          <div class="comic-burst">DR. P</div>
+          <div class="drp-portrait" role="img" aria-label="Dr. P resident peptide expert illustration">
+            <svg viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <radialGradient id="tealGlow" cx="50%" cy="45%" r="55%">
+                  <stop offset="0%" stop-color="#67f5df"/>
+                  <stop offset="60%" stop-color="#079982"/>
+                  <stop offset="100%" stop-color="#03211f"/>
+                </radialGradient>
+                <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000" flood-opacity=".35"/></filter>
+              </defs>
+              <circle cx="210" cy="210" r="194" fill="url(#tealGlow)" stroke="#092f2c" stroke-width="14"/>
+              <g filter="url(#shadow)">
+                <path d="M78 132c24-58 96-86 158-66 54 17 95 64 101 121 6 56-22 113-74 140-58 30-135 14-174-38-35-47-36-105-11-157Z" fill="#f1d5bd"/>
+                <path d="M88 110c18-64 91-93 157-76 43 11 80 41 101 81-21-10-48-8-69 4 9-23-7-48-32-56-29-9-61 6-76 31-15-19-46-25-70-12-16 8-29 23-38 43 8-5 17-10 27-15Z" fill="#e8e2d9"/>
+                <path d="M73 166c8-37 31-70 64-91-7 21-3 37 15 50-23 3-39 17-48 40 27-18 54-24 82-17-20 14-26 33-18 57 24-25 54-37 91-36-9 21-6 42 10 63 29-19 45-44 48-75 19 27 24 58 15 93 23-22 34-53 31-92 21 32 28 66 18 103 26-41 28-86 6-135-23-52-63-86-120-102-74-21-158 17-194 142Z" fill="#201f23"/>
+                <ellipse cx="150" cy="196" rx="50" ry="35" fill="none" stroke="#006f66" stroke-width="12"/>
+                <ellipse cx="260" cy="196" rx="50" ry="35" fill="none" stroke="#006f66" stroke-width="12"/>
+                <path d="M199 195h22" stroke="#006f66" stroke-width="10" stroke-linecap="round"/>
+                <circle cx="150" cy="197" r="9" fill="#171717"/><circle cx="260" cy="197" r="9" fill="#171717"/>
+                <path d="M173 260c21 24 58 24 78 0" fill="none" stroke="#671e17" stroke-width="10" stroke-linecap="round"/>
+                <path d="M181 264c17 11 43 11 62 0-4 18-17 28-33 28s-27-10-29-28Z" fill="#fff"/>
+                <path d="M116 328h186l38 74H78l38-74Z" fill="#f7f7f7" stroke="#d8d8d8" stroke-width="5"/>
+                <path d="M173 325l38 75 39-75" fill="#071015"/>
+                <path d="M211 325l28 75h-58l30-75Z" fill="#049b86"/>
+              </g>
+            </svg>
+          </div>
+          <div class="drp-label">
+            <strong>Resident Peptide Expert</strong>
+            <span>Simple breakdowns. Safer conversations. Better questions.</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="gallery-section" id="gallery">
-      <div class="container section-intro reveal">
-        <p class="eyebrow">Immersive pathways</p>
-        <h2>Depth, clarity, and calm confidence at every touchpoint.</h2>
-      </div>
-      <div class="gallery-panel panel-left reveal tilt-card">
-        <img class="gallery-photo" src="https://images.unsplash.com/photo-1511174511562-5f7f18b874f8?auto=format&fit=crop&w=1900&q=82" alt="Premium energy and vitality medical visual">
-        <div class="floating-copy"><span>Energy + Vitality</span><h3>For patients who want a more structured conversation about fatigue, recovery, and daily performance.</h3></div>
-      </div>
-      <div class="gallery-panel panel-right reveal tilt-card">
-        <img class="gallery-photo" src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?auto=format&fit=crop&w=1900&q=82" alt="Metabolic support and wellness nutrition visual">
-        <div class="floating-copy"><span>Metabolic Support</span><h3>A clean, premium intake flow for weight-management history, labs, goals, and provider review.</h3></div>
-      </div>
-      <div class="gallery-panel panel-left reveal tilt-card">
-        <img class="gallery-photo" src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1900&q=82" alt="Recovery and resilience clinical visual">
-        <div class="floating-copy"><span>Recovery + Resilience</span><h3>Positioned for education-first wellness support without miracle claims or underground messaging.</h3></div>
+    <section class="trust-strip">
+      <div class="container trust-grid">
+        <div><strong>Clinician Guided</strong><span>Care-first positioning</span></div>
+        <div><strong>Evidence First</strong><span>Decisions backed by data</span></div>
+        <div><strong>Transparent</strong><span>No gimmicks. Just facts.</span></div>
       </div>
     </section>
 
-    <section class="services-section" id="services">
+    <section class="watchlist-section" id="watchlist">
       <div class="container">
-        <div class="section-intro reveal">
-          <p class="eyebrow">Service architecture</p>
-          <h2>Premium cards. Simple choices. Strong conversion path.</h2>
+        <div class="section-heading reveal">
+          <p class="eyebrow">Peptide watchlist</p>
+          <h2>Comic-style education cards built for fast mobile reading.</h2>
+          <p>These are educational conversation starters, not medical advice or treatment claims.</p>
         </div>
-        <div class="service-grid">
-          <article class="service-card reveal tilt-card"><img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=700&q=80" alt="Clinical intake"><span class="service-icon">✦</span><h3>Clinical Intake</h3><p>Collect goals, history, and readiness with a refined screening flow.</p></article>
-          <article class="service-card reveal tilt-card"><img src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=700&q=80" alt="Provider review"><span class="service-icon">◈</span><h3>Provider Review</h3><p>Keep every recommendation tied to licensed clinical judgment.</p></article>
-          <article class="service-card reveal tilt-card"><img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=700&q=80" alt="Pathway matching"><span class="service-icon">◎</span><h3>Pathway Matching</h3><p>Route patients into energy, metabolic, recovery, sleep, or longevity tracks.</p></article>
-          <article class="service-card reveal tilt-card"><img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=700&q=80" alt="Ongoing support"><span class="service-icon">◇</span><h3>Ongoing Support</h3><p>Build follow-up, education, and patient communication into the experience.</p></article>
+
+        <div class="watchlist-grid">
+          <article class="watch-card reveal">
+            <div class="watch-top"><span>July Watchlist</span><b>Under Review</b></div>
+            <h3>TB-500</h3>
+            <p class="tagline">The tissue + recovery conversation.</p>
+            <ul>
+              <li><strong>What it is:</strong> Often discussed in tissue-support and recovery conversations.</li>
+              <li><strong>Why it matters:</strong> FDA review topic: wound healing.</li>
+              <li><strong>Dr. P take:</strong> Focus on mechanism, evidence, safety, and regulation.</li>
+            </ul>
+          </article>
+
+          <article class="watch-card reveal">
+            <div class="watch-top"><span>July Watchlist</span><b>Under Review</b></div>
+            <h3>BPC-157</h3>
+            <p class="tagline">The gut + repair conversation.</p>
+            <ul>
+              <li><strong>What it is:</strong> Often discussed in gut-health, tissue-repair, and recovery conversations.</li>
+              <li><strong>Why it matters:</strong> FDA review topic: ulcerative colitis.</li>
+              <li><strong>Dr. P take:</strong> Popular topic where gut, inflammation, and recovery overlap.</li>
+            </ul>
+          </article>
+
+          <article class="watch-card reveal">
+            <div class="watch-top"><span>July Watchlist</span><b>Under Review</b></div>
+            <h3>KPV</h3>
+            <p class="tagline">The inflammation conversation.</p>
+            <ul>
+              <li><strong>What it is:</strong> Short peptide often discussed around inflammatory-pathway education.</li>
+              <li><strong>Why it matters:</strong> Review topics include wound healing and inflammatory conditions.</li>
+              <li><strong>Dr. P take:</strong> Clean education first — no miracle claims.</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="proof-section" id="proof">
-      <div class="container proof-grid">
-        <div class="proof-copy reveal">
-          <p class="eyebrow">Proof, not hype</p>
-          <h2>Designed to feel premium without making reckless medical promises.</h2>
-          <p>PeptideHubRx uses compliant, education-first language: no guaranteed outcomes, no disease-treatment claims, no shortcut around provider review.</p>
+    <section class="comparison-section">
+      <div class="container comparison-card reveal">
+        <div class="comparison-copy">
+          <p class="eyebrow">Peptide comparison</p>
+          <h2>Different compounds. Different conversations.</h2>
+          <p>Use Dr. P to make each topic understandable at a glance — what it is, why people discuss it, and what questions to ask before doing anything.</p>
         </div>
-        <div class="proof-image-wrap reveal tilt-card">
-          <img src="https://images.unsplash.com/photo-1530026186672-2cd00ffc50fe?auto=format&fit=crop&w=1300&q=82" alt="Clean modern clinical consultation environment">
+        <div class="compare-grid">
+          <div><h3>GHK-Cu</h3><p>Often discussed in skin, hair, cosmetic repair, and tissue-support conversations.</p></div>
+          <div><h3>MK-677</h3><p>Often discussed around sleep, appetite, recovery, and body-composition interest.</p></div>
         </div>
-        <div class="proof-track reveal" aria-label="proof cards">
-          <div class="proof-card"><strong>Provider review</strong><span>Every pathway begins with eligibility and clinical judgment.</span></div>
-          <div class="proof-card"><strong>Readable at speed</strong><span>Luxury visuals with sharp copy and clear calls to action.</span></div>
-          <div class="proof-card"><strong>Mobile-first</strong><span>Motion simplifies on phones while keeping the high-end tone.</span></div>
+      </div>
+    </section>
+
+    <section class="how-section" id="how">
+      <div class="container how-grid">
+        <div class="section-heading reveal">
+          <p class="eyebrow">How it works</p>
+          <h2>Built for patients who want clarity before action.</h2>
+        </div>
+        <div class="steps-list">
+          <div class="step reveal"><span>01</span><div><strong>Learn</strong><p>Dr. P breaks down peptide topics into plain-English education.</p></div></div>
+          <div class="step reveal"><span>02</span><div><strong>Screen</strong><p>Patients complete an intake focused on goals, history, and expectations.</p></div></div>
+          <div class="step reveal"><span>03</span><div><strong>Review</strong><p>Any next step should be guided by a qualified clinician.</p></div></div>
         </div>
       </div>
     </section>
 
     <section class="final-cta" id="contact">
-      <img class="cta-photo" src="https://images.unsplash.com/photo-1581093458791-9d09a5fded7e?auto=format&fit=crop&w=2100&q=82" alt="Cinematic healthcare technology visual">
-      <div class="cta-bg"></div>
-      <div class="container cta-grid reveal">
+      <div class="container cta-card reveal">
         <div>
           <p class="eyebrow">Start intake</p>
-          <h2>Turn curiosity into a guided clinical conversation.</h2>
-          <p>Submit an eligibility request. A care team would review the information and route the patient to the appropriate next step.</p>
+          <h2>Want a clearer peptide conversation?</h2>
+          <p>Submit an eligibility request. This is educational intake only and does not guarantee treatment.</p>
         </div>
         <form class="lead-form" id="leadForm">
           <label>Full name<input type="text" name="name" placeholder="Your name" required></label>
           <label>Email<input type="email" name="email" placeholder="you@email.com" required></label>
-          <label>Primary goal<select name="goal" required><option value="">Select one</option><option>Energy and vitality</option><option>Metabolic support</option><option>Recovery and resilience</option><option>Sleep and restoration</option><option>General longevity</option></select></label>
-          <label class="checkbox"><input type="checkbox" required> I understand this is educational intake only and does not guarantee treatment.</label>
-          <button class="btn btn-primary" type="submit">Submit eligibility request</button>
+          <label>Primary goal<select name="goal" required><option value="">Select one</option><option>Energy and vitality</option><option>Recovery support education</option><option>Metabolic support education</option><option>General peptide education</option></select></label>
+          <label class="checkbox"><input type="checkbox" required> I understand this is educational content only, not medical advice.</label>
+          <button class="btn btn-primary" type="submit">Submit request</button>
           <p class="form-message" id="formMessage" role="status"></p>
         </form>
       </div>
@@ -150,8 +178,8 @@
 
   <footer class="footer">
     <div class="container footer-grid">
-      <a class="brand" href="#top"><span class="brand-mark">PH</span><span>PeptideHubRx</span></a>
-      <p>This website is for informational and lead-intake purposes only. It does not provide medical advice, diagnosis, or treatment. Availability depends on applicable law, pharmacy policy, and provider judgment.</p>
+      <a class="brand" href="#top"><span class="brand-icon">⚗</span><span>PEPTIDE <b>HUB</b></span></a>
+      <p>Educational content only. Not medical advice. Peptide availability and use depend on applicable law, clinical judgment, and qualified provider review.</p>
     </div>
   </footer>
 
