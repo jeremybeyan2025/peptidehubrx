@@ -1,19 +1,25 @@
 # PeptideHubRx Website
 
-A premium, responsive landing page for a provider-guided peptide and longevity intake funnel.
+A premium cinematic homepage for a provider-guided peptide and longevity intake funnel.
+
+## Current build
+- Full-screen cinematic hero
+- Layered parallax background
+- Sticky scroll narrative section
+- Immersive gallery panels
+- Glassmorphism service cards
+- Horizontal proof section
+- Full-width final CTA with eligibility form
+- Mobile responsive motion simplification
+- `prefers-reduced-motion` accessibility support
 
 ## Files
-- `index.html` — page structure and copy
-- `styles.css` — premium responsive styling
-- `script.js` — mobile menu and demo form submission
+- `index.html` — cinematic homepage structure and copy
+- `styles.css` — premium responsive visual system, parallax layout, glass cards, mobile behavior
+- `script.js` — mobile menu, scroll reveals, subtle pointer parallax, tilt cards, and demo form submission
 
 ## How to run
-Open `index.html` in a browser, or upload these files to any static host.
-
-## Codex task prompt
-Use the prompt below inside Codex if you want it to convert this into a full React/Next.js production website:
-
-> Convert this static PeptideHubRx website into a production-ready Next.js app. Preserve the premium dark clinical design, responsive layout, CTA hierarchy, and compliance-first medical copy. Add reusable components for Header, Hero, ProgramCards, ProcessSteps, ClinicalStandard, LeadForm, FAQ, and Footer. Connect the lead form to an environment-variable webhook endpoint called `LEAD_WEBHOOK_URL`. Add basic validation, success/error states, SEO metadata, and a privacy/disclaimer page. Do not add medical claims or guarantee outcomes.
+Open `index.html` in a browser, or deploy with GitHub Pages from the `main` branch and `/root` folder.
 
 ## Compliance note
 The copy intentionally uses provider-review and education-first language. Review with qualified healthcare/regulatory counsel before launch.
