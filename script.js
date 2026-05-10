@@ -108,6 +108,15 @@ function addQuizSummaryToLeadForm(title, body, safety) {
   hiddenPath.value = `${title} — ${body} — ${safety}`;
 }
 
+function goToLeadForm() {
+  const contactSection = document.querySelector('#contact');
+  const nameField = document.querySelector('#leadForm input[name="name"]');
+  if (!contactSection) return;
+
+  contactSection.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
+  setTimeout(() => nameField?.focus({ preventScroll: true }), 550);
+}
+
 const pathQuiz = document.querySelector('#pathQuiz');
 const quizResult = document.querySelector('#quizResult');
 
@@ -150,20 +159,16 @@ if (pathQuiz && quizResult) {
       safety = 'Priority: clinician review first. Safety flags or lack of oversight should be addressed before any treatment discussion.';
     }
 
-    quizResult.innerHTML = `<strong>${selected.title}</strong>${selected.body}<span>${safety}</span><span>We moved you to the intake form so the provider can review your answers.</span>`;
+    quizResult.innerHTML = `<strong>${selected.title}</strong>${selected.body}<span>${safety}</span><button type="button" class="btn btn-primary quiz-continue" id="continueToLead">Continue to Intake Form</button>`;
     quizResult.classList.add('show');
 
     setLeadGoal(selected.leadGoal);
     addQuizSummaryToLeadForm(selected.title, selected.body, safety);
 
-    const contactSection = document.querySelector('#contact');
-    const nameField = document.querySelector('#leadForm input[name="name"]');
-    if (contactSection) {
-      setTimeout(() => {
-        contactSection.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
-        setTimeout(() => nameField?.focus({ preventScroll: true }), 450);
-      }, 150);
-    }
+    quizResult.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'center' });
+
+    const continueButton = document.querySelector('#continueToLead');
+    continueButton?.addEventListener('click', goToLeadForm, { once: true });
   });
 }
 
