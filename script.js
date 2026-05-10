@@ -64,6 +64,50 @@ function startTicker() {
 
 startTicker();
 
+function setLeadGoal(goalText) {
+  const leadGoalSelect = document.querySelector('#leadForm select[name="goal"]');
+  if (!leadGoalSelect || !goalText) return;
+
+  const normalizedGoal = goalText.trim().toLowerCase();
+  let matchedOption = Array.from(leadGoalSelect.options).find((option) => {
+    return option.value.trim().toLowerCase() === normalizedGoal || option.textContent.trim().toLowerCase() === normalizedGoal;
+  });
+
+  if (!matchedOption) {
+    matchedOption = document.createElement('option');
+    matchedOption.value = goalText;
+    matchedOption.textContent = goalText;
+    leadGoalSelect.appendChild(matchedOption);
+  }
+
+  leadGoalSelect.value = matchedOption.value;
+  leadGoalSelect.dispatchEvent(new Event('change', { bubbles: true }));
+}
+
+function addQuizSummaryToLeadForm(title, body, safety) {
+  const leadForm = document.querySelector('#leadForm');
+  if (!leadForm) return;
+
+  let summary = document.querySelector('#leadQuizSummary');
+  if (!summary) {
+    summary = document.createElement('div');
+    summary.id = 'leadQuizSummary';
+    summary.className = 'quiz-result show lead-quiz-summary';
+    leadForm.prepend(summary);
+  }
+
+  summary.innerHTML = `<strong>${title}</strong>${body}<span>${safety}</span>`;
+
+  let hiddenPath = leadForm.querySelector('input[name="quiz_path"]');
+  if (!hiddenPath) {
+    hiddenPath = document.createElement('input');
+    hiddenPath.type = 'hidden';
+    hiddenPath.name = 'quiz_path';
+    leadForm.appendChild(hiddenPath);
+  }
+  hiddenPath.value = `${title} — ${body} — ${safety}`;
+}
+
 const pathQuiz = document.querySelector('#pathQuiz');
 const quizResult = document.querySelector('#quizResult');
 
@@ -109,16 +153,16 @@ if (pathQuiz && quizResult) {
     quizResult.innerHTML = `<strong>${selected.title}</strong>${selected.body}<span>${safety}</span><span>We moved you to the intake form so the provider can review your answers.</span>`;
     quizResult.classList.add('show');
 
-    const leadGoalSelect = document.querySelector('#leadForm select[name="goal"]');
-    if (leadGoalSelect && selected.leadGoal) {
-      leadGoalSelect.value = selected.leadGoal;
-    }
+    setLeadGoal(selected.leadGoal);
+    addQuizSummaryToLeadForm(selected.title, selected.body, safety);
 
     const contactSection = document.querySelector('#contact');
+    const nameField = document.querySelector('#leadForm input[name="name"]');
     if (contactSection) {
       setTimeout(() => {
         contactSection.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
-      }, 250);
+        setTimeout(() => nameField?.focus({ preventScroll: true }), 450);
+      }, 150);
     }
   });
 }
