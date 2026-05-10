@@ -29,7 +29,6 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
 
-// Reliable JavaScript marquee fallback for GitHub Pages/mobile browsers.
 function startTicker() {
   const ticker = document.querySelector('.ticker-track');
   if (!ticker || prefersReducedMotion) return;
@@ -54,9 +53,7 @@ function startTicker() {
     lastTime = now;
     position -= speed * delta;
 
-    if (Math.abs(position) >= distance) {
-      position = 0;
-    }
+    if (Math.abs(position) >= distance) position = 0;
 
     ticker.style.transform = `translate3d(${position}px, 0, 0)`;
     requestAnimationFrame(animate);
@@ -66,6 +63,48 @@ function startTicker() {
 }
 
 startTicker();
+
+const pathQuiz = document.querySelector('#pathQuiz');
+const quizResult = document.querySelector('#quizResult');
+
+if (pathQuiz && quizResult) {
+  pathQuiz.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const data = Object.fromEntries(new FormData(pathQuiz));
+
+    const paths = {
+      repair: {
+        title: 'Repair + Resilience Path',
+        body: 'Best starting conversation: recovery, tissue-support education, medication review, injury history, inflammatory burden, and provider screening. Relevant education pages: BPC-157, TB-500, and KPV.'
+      },
+      metabolic: {
+        title: 'Metabolic Clarity Path',
+        body: 'Best starting conversation: GLP-1 history, appetite, protein intake, resistance training, hydration, GI tolerance, labs, and clinician monitoring. Relevant education page: GLP-1s.'
+      },
+      glow: {
+        title: 'Glow + Barrier Path',
+        body: 'Best starting conversation: skin quality, hair-support goals, barrier health, inflammation, cosmetic expectations, and claim-safe education. Relevant education pages: GHK-Cu and KPV.'
+      },
+      focus: {
+        title: 'Sleep + Focus Path',
+        body: 'Best starting conversation: sleep quality, stress load, focus goals, stimulant or medication use, mental-health history, and neurologic safety review. Relevant education pages: DSIP and Semax.'
+      }
+    };
+
+    const selected = paths[data.goal] || {
+      title: 'Provider Review Path',
+      body: 'Best starting conversation: goals, safety flags, current medications, medical history, and whether peptide education is appropriate at all.'
+    };
+
+    let safety = 'Next step: bring this path to a qualified clinician for screening. This does not recommend a compound, dose, or protocol.';
+    if (data.flags === 'yes' || data.support === 'none') {
+      safety = 'Priority: clinician review first. Safety flags or lack of oversight should be addressed before any treatment discussion.';
+    }
+
+    quizResult.innerHTML = `<strong>${selected.title}</strong>${selected.body}<span>${safety}</span>`;
+    quizResult.classList.add('show');
+  });
+}
 
 const leadForm = document.querySelector('#leadForm');
 const formMessage = document.querySelector('#formMessage');
