@@ -75,25 +75,30 @@ if (pathQuiz && quizResult) {
     const paths = {
       repair: {
         title: 'Repair + Resilience Path',
-        body: 'Best starting conversation: recovery, tissue-support education, medication review, injury history, inflammatory burden, and provider screening. Relevant education pages: BPC-157, TB-500, and KPV.'
+        body: 'Best starting conversation: recovery, tissue-support education, medication review, injury history, inflammatory burden, and provider screening. Relevant education pages: BPC-157, TB-500, and KPV.',
+        leadGoal: 'Recovery support education'
       },
       metabolic: {
         title: 'Metabolic Clarity Path',
-        body: 'Best starting conversation: GLP-1 history, appetite, protein intake, resistance training, hydration, GI tolerance, labs, and clinician monitoring. Relevant education page: GLP-1s.'
+        body: 'Best starting conversation: GLP-1 history, appetite, protein intake, resistance training, hydration, GI tolerance, labs, and clinician monitoring. Relevant education page: GLP-1s.',
+        leadGoal: 'Metabolic support education'
       },
       glow: {
         title: 'Glow + Barrier Path',
-        body: 'Best starting conversation: skin quality, hair-support goals, barrier health, inflammation, cosmetic expectations, and claim-safe education. Relevant education pages: GHK-Cu and KPV.'
+        body: 'Best starting conversation: skin quality, hair-support goals, barrier health, inflammation, cosmetic expectations, and claim-safe education. Relevant education pages: GHK-Cu and KPV.',
+        leadGoal: 'General peptide education'
       },
       focus: {
         title: 'Sleep + Focus Path',
-        body: 'Best starting conversation: sleep quality, stress load, focus goals, stimulant or medication use, mental-health history, and neurologic safety review. Relevant education pages: DSIP and Semax.'
+        body: 'Best starting conversation: sleep quality, stress load, focus goals, stimulant or medication use, mental-health history, and neurologic safety review. Relevant education pages: DSIP and Semax.',
+        leadGoal: 'Sleep or cognitive education'
       }
     };
 
     const selected = paths[data.goal] || {
       title: 'Provider Review Path',
-      body: 'Best starting conversation: goals, safety flags, current medications, medical history, and whether peptide education is appropriate at all.'
+      body: 'Best starting conversation: goals, safety flags, current medications, medical history, and whether peptide education is appropriate at all.',
+      leadGoal: 'General peptide education'
     };
 
     let safety = 'Next step: bring this path to a qualified clinician for screening. This does not recommend a compound, dose, or protocol.';
@@ -101,8 +106,20 @@ if (pathQuiz && quizResult) {
       safety = 'Priority: clinician review first. Safety flags or lack of oversight should be addressed before any treatment discussion.';
     }
 
-    quizResult.innerHTML = `<strong>${selected.title}</strong>${selected.body}<span>${safety}</span>`;
+    quizResult.innerHTML = `<strong>${selected.title}</strong>${selected.body}<span>${safety}</span><span>We moved you to the intake form so the provider can review your answers.</span>`;
     quizResult.classList.add('show');
+
+    const leadGoalSelect = document.querySelector('#leadForm select[name="goal"]');
+    if (leadGoalSelect && selected.leadGoal) {
+      leadGoalSelect.value = selected.leadGoal;
+    }
+
+    const contactSection = document.querySelector('#contact');
+    if (contactSection) {
+      setTimeout(() => {
+        contactSection.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
+      }, 250);
+    }
   });
 }
 
