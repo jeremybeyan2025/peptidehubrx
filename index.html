@@ -1,187 +1,104 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PeptideHubRx | Dr. P July Peptide Watchlist</title>
-  <meta name="description" content="PeptideHubRx is a mobile-first peptide education and intake experience featuring Dr. P, 7 new peptides in July, compound explainers, GLP-1 education, compliant stack education, and provider-guided intake." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="quiz.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PeptideHubRx — Built to be felt, not seen</title>
+<meta name="description" content="PeptideHubRx. Premium peptides, provider-reviewed. BPC-157, TB-500, KPV, MOTS-c, Epitalon, Semax and DSIP — small vial, serious science." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="oura.css" />
 </head>
 <body>
-  <div class="site-noise" aria-hidden="true"></div>
 
-  <header class="site-header">
-    <nav class="nav container">
-      <a class="brand text-brand" href="index.html"><span>Peptide<b>HubRx</b></span></a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="navLinks">Menu</button>
-      <div class="nav-links" id="navLinks">
-        <a href="#watchlist">July Watchlist</a>
-        <a href="stacks.html">Stacks</a>
-        <a href="#quiz">Quiz</a>
-        <a href="glp-1.html">GLP-1s</a>
-        <a href="#drp">Dr. P</a>
-        <a class="nav-cta" href="#contact">Start</a>
-      </div>
-    </nav>
+<section class="hero" id="top">
+  <div class="hero-vial hero-vial-top" data-parallax="0.18"><img src="vial-hero.webp" alt="Macro of a PeptideHubRx vial" /></div>
+  <header class="bar">
+    <a class="wordmark" href="index.html">PEPTIDE&nbsp;HUB<sup>Rx</sup></a>
+    <div class="bar-actions">
+      <a class="icon-btn" href="#shop" aria-label="Shop peptides">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/><path d="M2 3h3l2.6 12.2a1.5 1.5 0 0 0 1.5 1.2h7.9a1.5 1.5 0 0 0 1.5-1.2L20.5 7H6"/></svg>
+      </a>
+      <button class="icon-btn" id="menuBtn" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 8h16M4 16h16"/></svg>
+      </button>
+    </div>
   </header>
+  <nav class="menu" id="menu">
+    <a href="#shop">Shop</a><a href="stacks.html">Stacks</a><a href="glp-1.html">GLP-1</a><a href="#quiz">Quiz</a><a href="#intake">Start intake</a>
+  </nav>
+  <div class="hero-copy">
+    <p class="hero-brand reveal">PeptideHub<sup>Rx</sup></p>
+    <h1 class="reveal">Built to be felt,<br/><em>not seen.</em></h1>
+  </div>
+  <div class="hero-vial hero-vial-bottom" data-parallax="-0.12"><img src="vial-curve.webp" alt="" /></div>
+  <a class="pill pill-hero reveal" href="#shop">Shop Now</a>
+  <div class="scroll-cue" aria-hidden="true"></div>
+</section>
 
-  <main id="top">
-    <section class="mobile-hero july-hero">
-      <div class="container hero-wrap">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">Dr. P presents • educational quick takes</p>
-          <h1>7 new peptides in July.</h1>
-          <p class="hero-subhead">A visual peptide watchlist built for fast mobile learning: BPC-157, TB-500, KPV, MOTS-c, Epitalon, Semax, and DSIP. Science over hype. Educational content only.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#watchlist">See the July watchlist</a>
-            <a class="btn btn-secondary" href="#quiz">Take the 5-question quiz</a>
-          </div>
-        </div>
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>BPC-157</span><i>•</i><span>TB-500</span><i>•</i><span>KPV</span><i>•</i><span>MOTS-c</span><i>•</i><span>Epitalon</span><i>•</i><span>Semax</span><i>•</i><span>DSIP</span><i>•</i><span>GHK-Cu</span><i>•</i>
+    <span>BPC-157</span><i>•</i><span>TB-500</span><i>•</i><span>KPV</span><i>•</i><span>MOTS-c</span><i>•</i><span>Epitalon</span><i>•</i><span>Semax</span><i>•</i><span>DSIP</span><i>•</i><span>GHK-Cu</span><i>•</i>
+  </div>
+</div>
 
-        <div class="drp-hero-card reveal" id="drp">
-          <div class="comic-burst">DR. P</div>
-          <div class="drp-portrait" aria-label="Dr. P resident peptide expert illustration">
-            <img class="drp-real-image" src="0DFFDA9E-B63D-43A8-9CCC-87F499FAFA7E.png" alt="Dr. P, PeptideHubRx resident peptide expert">
-          </div>
-          <div class="drp-label">
-            <strong>Resident Peptide Expert</strong>
-            <span>Simple breakdowns. Safer conversations. Better questions.</span>
-          </div>
-        </div>
-      </div>
-    </section>
+<section class="manifesto">
+  <p class="eyebrow reveal">Small vial. Serious science.</p>
+  <h2 class="reveal">No noise. No hype.<br/>Just the molecule,<br/><em>beautifully delivered.</em></h2>
+  <p class="lede reveal">Every peptide in the Hub is presented the way it deserves — plain-English science, honest evidence limits, and a clinician review before anything ships. Sexy on the outside. Serious on the inside.</p>
+</section>
 
-    <section class="ticker-wrap" aria-label="July peptide education ticker">
-      <div class="ticker-track">
-        <div class="ticker-group">
-          <span>7 new peptides in July</span><span>BPC-157</span><span>TB-500</span><span>KPV</span><span>MOTS-c</span><span>Epitalon</span><span>Semax</span><span>DSIP</span><span>Science over hype</span><span>Educational content only</span>
-        </div>
-        <div class="ticker-group" aria-hidden="true">
-          <span>7 new peptides in July</span><span>BPC-157</span><span>TB-500</span><span>KPV</span><span>MOTS-c</span><span>Epitalon</span><span>Semax</span><span>DSIP</span><span>Science over hype</span><span>Educational content only</span>
-        </div>
-      </div>
-    </section>
+<section class="shop" id="shop">
+  <div class="shop-head">
+    <p class="eyebrow reveal">The collection</p>
+    <h2 class="reveal">Shop peptides</h2>
+    <p class="shop-sub reveal">Swipe the collection. Tap a vial for the full breakdown.</p>
+  </div>
+  <div class="rail">
+    <a class="card reveal" href="bpc-157.html"><span class="card-tag">Gut + repair</span><h3>BPC-157</h3><p>The gut + repair conversation, in one small vial.</p><span class="card-cta">Shop →</span></a>
+    <a class="card reveal" href="tb-500.html"><span class="card-tag">Tissue support</span><h3>TB-500</h3><p>The tissue + recovery conversation.</p><span class="card-cta">Shop →</span></a>
+    <a class="card reveal" href="kpv.html"><span class="card-tag">Inflammation</span><h3>KPV</h3><p>The calm-down signal your system already knows.</p><span class="card-cta">Shop →</span></a>
+    <a class="card reveal" href="mots-c.html"><span class="card-tag">Cell energy</span><h3>MOTS-c</h3><p>The mitochondrial conversation — energy at the source.</p><span class="card-cta">Shop →</span></a>
+    <a class="card reveal" href="epitalon.html"><span class="card-tag">Longevity</span><h3>Epitalon</h3><p>The aging + cellular clock conversation.</p><span class="card-cta">Shop →</span></a>
+    <a class="card reveal" href="semax.html"><span class="card-tag">Cognitive</span><h3>Semax</h3><p>The focus + neuropeptide conversation.</p><span class="card-cta">Shop →</span></a>
+    <a class="card reveal" href="dsip.html"><span class="card-tag">Sleep</span><h3>DSIP</h3><p>The sleep + recovery conversation.</p><span class="card-cta">Shop →</span></a>
+    <a class="card reveal" href="ghk-cu.html"><span class="card-tag">Skin</span><h3>GHK-Cu</h3><p>The copper-peptide conversation for skin.</p><span class="card-cta">Shop →</span></a>
+    <a class="card card-dark reveal" href="stacks.html"><span class="card-tag">Curated</span><h3>Stacks</h3><p>Different compounds. Different conversations. Combined with intent.</p><span class="card-cta">Shop stacks →</span></a>
+  </div>
+</section>
 
-    <section class="trust-strip">
-      <div class="container trust-grid">
-        <div><strong>Evidence First</strong><span>Research-driven education</span></div>
-        <div><strong>No Hype</strong><span>No miracle claims</span></div>
-        <div><strong>Clinician Guided</strong><span>Care-first positioning</span></div>
-      </div>
-    </section>
+<section class="fullbleed">
+  <div class="fullbleed-img" data-parallax="0.10"><img src="vials-trio.webp" alt="Three PeptideHubRx vials" /></div>
+  <div class="fullbleed-copy">
+    <p class="eyebrow light reveal">Precision in every vial</p>
+    <h2 class="reveal">Measured.<br/>Sealed.<br/><em>Yours.</em></h2>
+    <a class="pill reveal" href="#intake">Start Intake</a>
+  </div>
+</section>
 
-    <section class="watchlist-section" id="watchlist">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow">July peptide watchlist</p>
-          <h2>7 new peptides in July. Tap a card for the deeper breakdown.</h2>
-          <p>Seven educational quick takes with Dr. P: what it is, why people discuss it, what the mechanism conversation sounds like, and what safety questions belong first.</p>
-        </div>
+<section class="steps">
+  <p class="eyebrow reveal">How it works</p>
+  <h2 class="reveal">Clarity before action.</h2>
+  <div class="step reveal"><span>01</span><h3>Learn</h3><p>Plain-English breakdowns — mechanism, evidence, safety questions first.</p></div>
+  <div class="step reveal"><span>02</span><h3>Screen</h3><p>A five-question intake focused on goals, history, medications and safety flags.</p></div>
+  <div class="step reveal"><span>03</span><h3>Review</h3><p>A qualified clinician decides whether a pathway is appropriate for you.</p></div>
+</section>
 
-        <div class="watchlist-grid watchlist-grid-seven">
-          <a class="watch-card reveal card-link" href="bpc-157.html"><div class="watch-top"><span>New in July</span><b>Gut + repair</b></div><h3>BPC-157</h3><p class="tagline">The gut + repair conversation.</p><ul><li><strong>Tap in:</strong> Gut-health conversation, repair talk, regulatory caution, and Dr. P take.</li></ul></a>
-          <a class="watch-card reveal card-link" href="tb-500.html"><div class="watch-top"><span>New in July</span><b>Tissue support</b></div><h3>TB-500</h3><p class="tagline">The tissue + recovery conversation.</p><ul><li><strong>Tap in:</strong> Mechanism, wound-healing discussion, safety flags, and Dr. P take.</li></ul></a>
-          <a class="watch-card reveal card-link" href="kpv.html"><div class="watch-top"><span>New in July</span><b>Inflammation</b></div><h3>KPV</h3><p class="tagline">The inflammation conversation.</p><ul><li><strong>Tap in:</strong> Inflammatory pathway education, human-data caution, and Dr. P take.</li></ul></a>
-          <a class="watch-card reveal card-link" href="mots-c.html"><div class="watch-top"><span>New in July</span><b>Cell energy</b></div><h3>MOTS-c</h3><p class="tagline">The mitochondrial conversation.</p><ul><li><strong>Tap in:</strong> Metabolic stress, mitochondrial signaling, exercise-mimetic interest, and evidence caution.</li></ul></a>
-          <a class="watch-card reveal card-link" href="epitalon.html"><div class="watch-top"><span>New in July</span><b>Longevity</b></div><h3>Epitalon</h3><p class="tagline">The aging + cellular clock conversation.</p><ul><li><strong>Tap in:</strong> Telomere conversation, sleep/circadian interest, and human-evidence caution.</li></ul></a>
-          <a class="watch-card reveal card-link" href="semax.html"><div class="watch-top"><span>New in July</span><b>Cognitive</b></div><h3>Semax</h3><p class="tagline">The focus + neuropeptide conversation.</p><ul><li><strong>Tap in:</strong> Cognitive-performance interest, neurotrophic discussion, and careful claims.</li></ul></a>
-          <a class="watch-card reveal card-link watch-card-featured" href="dsip.html"><div class="watch-top"><span>New in July</span><b>Sleep</b></div><h3>DSIP</h3><p class="tagline">The sleep + recovery conversation.</p><ul><li><strong>Tap in:</strong> Sleep architecture discussion, stress/recovery interest, and evidence limits.</li></ul></a>
-        </div>
-      </div>
-    </section>
+<section class="intake" id="intake">
+  <p class="eyebrow light reveal">5-question quiz</p>
+  <h2 class="reveal">Want a clearer<br/><em>peptide conversation?</em></h2>
+  <p class="lede light reveal">This quiz does not diagnose, prescribe, or recommend a protocol. It organizes your goals and safety flags so a qualified clinician can decide what, if anything, is appropriate.</p>
+  <a class="pill reveal" id="quiz" href="stacks.html">Take the Quiz</a>
+  <p class="fineprint">Educational content only. Peptides are dispensed only after provider review and eligibility screening. Nothing on this site is medical advice.</p>
+</section>
 
-    <section class="comparison-section">
-      <div class="container comparison-card reveal">
-        <div class="comparison-copy">
-          <p class="eyebrow">More peptide education</p>
-          <h2>Different compounds. Different conversations.</h2>
-          <p>Keep each page focused: plain-English mechanism, safety questions, evidence limits, and why qualified review matters.</p>
-        </div>
-        <div class="compare-grid">
-          <a href="ghk-cu.html"><h3>GHK-Cu</h3><p>Skin, hair, cosmetic repair, and tissue-support education.</p></a>
-          <a href="mk-677.html"><h3>MK-677</h3><p>Growth-hormone secretagogue conversation, sleep, appetite, and recovery interest.</p></a>
-        </div>
-      </div>
-    </section>
+<footer class="footer">
+  <p class="wordmark">PEPTIDE&nbsp;HUB<sup>Rx</sup></p>
+  <p>Science over hype. © PeptideHubRx</p>
+</footer>
 
-    <section class="watchlist-section compact-section">
-      <div class="container">
-        <div class="section-heading reveal"><p class="eyebrow">Popular stacks</p><h2>Compliant stack lanes that are fun, not reckless.</h2><p>Category-based discussion guides only. No dosing, no protocol claims, no guaranteed outcomes.</p></div>
-        <a class="stack-feature-card reveal" href="stacks.html"><span>Explore the stack library</span><strong>Repair + Resilience • Glow + Barrier • Metabolic Clarity • Sleep + Focus</strong><em>View compliant stack lanes →</em></a>
-      </div>
-    </section>
-
-    <section class="quiz-section" id="quiz">
-      <div class="container quiz-card reveal">
-        <div class="quiz-copy">
-          <p class="eyebrow">5-question education quiz</p>
-          <h2>Help the provider see the right conversation path.</h2>
-          <p>This quiz does not diagnose, prescribe, or recommend a protocol. It organizes your goals and safety flags so a qualified clinician can decide what, if anything, is appropriate.</p>
-        </div>
-        <form class="quiz-form" id="pathQuiz">
-          <label>1. What is your primary goal?
-            <select name="goal" required>
-              <option value="">Select one</option>
-              <option value="repair">Recovery, mobility, or tissue-support education</option>
-              <option value="metabolic">Weight, appetite, glucose, or metabolic support education</option>
-              <option value="glow">Skin, hair, barrier, or cosmetic-repair education</option>
-              <option value="focus">Sleep, focus, mood, or cognitive-performance education</option>
-            </select>
-          </label>
-          <label>2. What best describes your current medical support?
-            <select name="support" required>
-              <option value="">Select one</option>
-              <option value="active">I have a clinician actively managing my care</option>
-              <option value="some">I have a clinician but need guidance on what to ask</option>
-              <option value="none">I do not currently have clinician oversight</option>
-            </select>
-          </label>
-          <label>3. Are you currently using prescription medications or GLP-1 therapy?
-            <select name="meds" required>
-              <option value="">Select one</option>
-              <option value="glp">Yes — GLP-1 or metabolic medication</option>
-              <option value="rx">Yes — other prescription medications</option>
-              <option value="none">No current prescription medications</option>
-            </select>
-          </label>
-          <label>4. Any safety flags a clinician should review first?
-            <select name="flags" required>
-              <option value="">Select one</option>
-              <option value="yes">Yes — medical history, pregnancy, cancer history, endocrine issue, autoimmune issue, or unexplained symptoms</option>
-              <option value="not-sure">Not sure — I want help identifying what matters</option>
-              <option value="no">No obvious safety flags</option>
-            </select>
-          </label>
-          <label>5. What do you want from the consult?
-            <select name="intent" required>
-              <option value="">Select one</option>
-              <option value="education">Education and questions to ask a provider</option>
-              <option value="screening">Eligibility screening and medical review</option>
-              <option value="monitoring">Help understanding labs, monitoring, and safety</option>
-            </select>
-          </label>
-          <button class="btn btn-primary" type="submit">Show my education path</button>
-          <div class="quiz-result" id="quizResult" aria-live="polite"></div>
-        </form>
-      </div>
-    </section>
-
-    <section class="how-section" id="how">
-      <div class="container how-grid">
-        <div class="section-heading reveal"><p class="eyebrow">How it works</p><h2>Built for patients who want clarity before action.</h2></div>
-        <div class="steps-list"><div class="step reveal"><span>01</span><div><strong>Learn</strong><p>Dr. P breaks down peptide topics into plain-English education.</p></div></div><div class="step reveal"><span>02</span><div><strong>Screen</strong><p>Patients complete an intake focused on goals, history, medications, and safety flags.</p></div></div><div class="step reveal"><span>03</span><div><strong>Review</strong><p>A qualified clinician determines whether any treatment pathway is appropriate.</p></div></div></div>
-      </div>
-    </section>
-
-    <section class="final-cta" id="contact"><div class="container cta-card reveal"><div><p class="eyebrow">Start intake</p><h2>Want a clearer peptide conversation?</h2><p>Submit an eligibility request. This is educational intake only and does not guarantee treatment.</p></div><form class="lead-form" id="leadForm"><label>Full name<input type="text" name="name" placeholder="Your name" required></label><label>Email<input type="email" name="email" placeholder="you@email.com" required></label><label>Primary goal<select name="goal" required><option value="">Select one</option><option>7 new peptides in July education</option><option>Recovery support education</option><option>Metabolic support education</option><option>Sleep or cognitive education</option><option>General peptide education</option></select></label><label class="checkbox"><input type="checkbox" required> I understand this is educational content only, not medical advice.</label><button class="btn btn-primary" type="submit">Submit request</button><p class="form-message" id="formMessage" role="status"></p></form></div></section>
-  </main>
-
-  <footer class="footer"><div class="container footer-grid"><a class="brand text-brand" href="index.html"><span>Peptide<b>HubRx</b></span></a><p>Educational content only. Not medical advice. Peptide availability and use depend on applicable law, clinical judgment, and qualified provider review.</p></div></footer>
-
-  <script src="script.js"></script>
+<script src="oura.js"></script>
 </body>
 </html>
